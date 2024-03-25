@@ -1,0 +1,93 @@
+.card {
+  overflow: hidden;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  height: 45vh;
+  flex-direction: column;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card:hover {
+  border-color: burlywood;
+}
+
+.imageContainer {
+  aspect-ratio: 16/8;
+  height: 25vh;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 16/8;
+  object-fit: contain;
+}
+
+.desc {
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.productBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 120px;
+  height: 40px;
+  margin-right: 10px;
+  font-weight: bold;
+  border: 2px solid #333333;
+  transition: 0.3s;
+  box-shadow: 5px 5px 0px 0px rgba(51, 51, 51, 1);
+  background-color: #ffffff;
+}
+
+.button:hover {
+  box-shadow: 0 0 #333;
+  border: 1px;
+  color: #fff;
+  background-color: burlywood;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8vh;
+}

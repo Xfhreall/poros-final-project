@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Monserrat:wght@200;300;400;500;600;700&display=swap");
+#beranda {
+  position: relative;
+  max-width: 100%;
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  background-color: #1abc9c;
+  justify-content: space-between;
+  overflow: hidden;
+}
+#beranda::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(40%);
+}
+
+.heroAnimation {
+  margin-top: 2em;
+}
+
+.hero-content {
+  position: relative;
+  font-family: "Monserrat", sans-serif;
+  color: white;
+  text-align: start;
+  top: 5rem;
+  margin-left: 5%;
+}
+
+.hero-image img {
+  margin-top: 8em;
+  width: 44em;
+  height: 32em;
+  position: absolute;
+  bottom: -3em;
+  right: -3em;
+}
+.hero-title p {
+  font-size: 3rem;
+  color: #1abc9c;
+  line-height: 1;
+  font-weight: 200;
+  overflow-y: hidden;
+}
+.hero-title h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 250;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #bfc0c0;
+  margin: 40px auto;
+  color: #bfc0c0;
+  border-radius: 6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.45 ease-out;
+  -webkit-transition: all 0.45 ease-out;
+  -moz-transition: all 0.45 ease-out;
+  -ms-transition: all 0.45 ease-out;
+  -o-transition: all 0.45 ease-out;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.button a {
+  color: #e4e9f7;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+#button-3 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
+#button-3:hover {
+  border: 2px solid #1abc9c;
+  background-color: rgba(25, 168, 139, 0.4039215686);
+}
+#button-3:hover a {
+  color: #fff;
+}
+#button-3:hover #circle {
+  left: 0%;
+}
+#button-3 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
