@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import api from "../../api";
 import MainLayout from "../../layouts/MainLayout";
 import GlobalContext from "../../context/GlobalContext";
+import style from "./ProductDetailPage.module.css";
 
 function PostDetailPage() {
   const params = useParams();
@@ -23,25 +24,44 @@ function PostDetailPage() {
     getProductDetail();
   }, [params.id]);
 
-  const isInCart = () => {
-    return cartProducts.some((item) => item.id === product.id);
-  };
-
-  const addToCard = () => {
+  const addToCart = () => {
     setCartProducts((prev) => [...prev, product]);
   };
 
   return (
     <MainLayout>
-      {product && (
-        <div>
-          <h1>{product.title}</h1>
-          <p>{product.description}</p>
-          <button onClick={addToCard} disabled={isInCart()}>
-            Add to Cart
-          </button>
-        </div>
-      )}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "40px",
+        }}
+      >
+        {product && (
+          <section className={style.card} style={{ margin: "2vh" }}>
+            <div className={style.imageContainer}>
+              <img src={product.image} className={style.image} />
+            </div>
+            <div>
+              <div className={style.desc}>
+                <h2 className={style.title}>{product.title}</h2>
+                <p style={{ marginTop: "70px", lineHeight: "2" }}>
+                  {product.description}
+                </p>
+                <div className={style.bottom}>
+                  <p className={style.price} s>
+                    ${product.price}
+                  </p>
+                  <button onClick={addToCart} class={style.button}>
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+      </div>
     </MainLayout>
   );
 }
