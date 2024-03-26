@@ -7,7 +7,7 @@ import HeroPage from "../HeroPage/HeroPage";
 // import Footer from "../FooterPage/FooterPage";
 function HomePage() {
   const [products, setProducts] = useState([]);
-
+  const [selectedCategory, setSelectedCategory] = useState("All");
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -21,10 +21,53 @@ function HomePage() {
 
     fetchPosts();
   }, []);
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
 
   return (
     <MainLayout>
       <HeroPage />
+      <div className={style.filterSection}>
+        <h4 className={style.titleFilter}>Search By: </h4>
+        <div className={style.filterContainer}>
+          <button
+            className={style.filterButton}
+            onClick={() => handleCategoryChange("All")}
+          >
+            All
+          </button>
+          <button
+            className={style.filterButton}
+            onClick={() => handleCategoryChange("electronics")}
+          >
+            Electronics
+          </button>
+          <button
+            className={style.filterButton}
+            onClick={() => handleCategoryChange("jewelery")}
+          >
+            Jewelry
+          </button>
+          <button
+            className={style.filterButton}
+            onClick={() => handleCategoryChange("men's clothing")}
+          >
+            Men's Clothing
+          </button>
+          <button
+            className={style.filterButton}
+            onClick={() => handleCategoryChange("women's clothing")}
+          >
+            Women's Clothing
+          </button>
+        </div>
+      </div>
       <main
         className={style.gridContainer}
         style={{ margin: "10px 10px" }}
