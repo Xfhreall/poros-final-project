@@ -73,10 +73,9 @@ function HomePage() {
         style={{ margin: "10px 10px" }}
         id="produk"
       >
-        {products &&
-          products.map((product) => {
-            return <ProductCard key={product.id} data={product} />;
-          })}
+        {filteredProducts.map((product) => {
+          return <ProductCard key={product.id} data={product} />;
+        })}
       </main>
       <div
         id="about"
