@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0; /* Added padding reset */
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -20,8 +21,11 @@ a {
 ::-webkit-scrollbar-thumb {
   background: burlywood;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+}
+
+/* Media query for adjusting scrollbar width on smaller screens */
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 }
