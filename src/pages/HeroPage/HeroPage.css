@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  background-image: url("/src/assets/—Pngtree—fashionable\ apparel\ display\ with\ greenery_7226903.jpg");
+  background-image: url("https://png.pngtree.com/background/20230427/original/pngtree-hanging-on-a-rack-in-dark-room-picture-image_2494555.jpg");
 }
 
 #beranda::before {
@@ -49,14 +49,14 @@
 .hero-title h1 {
   font-size: 3rem;
   font-weight: 500;
-  color: black;
+  color: white;
 }
 
 .hero-subtitle {
   font-size: 20px;
   font-weight: 250;
   margin-top: 1rem;
-  color: black;
+  color: white;
 }
 
 .button {
@@ -85,7 +85,7 @@
   -o-border-radius: 6px;
 }
 .button a {
-  color: black;
+  color: white;
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: 500;

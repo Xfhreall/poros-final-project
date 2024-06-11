@@ -44,6 +44,7 @@ const CartPage = () => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <h1 className={styles.title}>Shopping Bag</h1>
+          <h3 className={styles.title}>(pages ini masih dalam develop)</h3>
           <div className={styles.bottom}>
             <div className={styles.info}>
               {cartProducts.map((product) => (
