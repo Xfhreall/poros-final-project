@@ -5,13 +5,8 @@
   border: 2px solid whitesmoke;
   border-radius: 10px;
   display: flex;
-  height: 45vh;
   flex-direction: column;
   cursor: default;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 .card:hover {
@@ -20,18 +15,14 @@
 
 .imageContainer {
   aspect-ratio: 16/8;
-  height: 25vh;
   background-color: white;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  overflow: hidden;
 }
 
 .image {
   width: 100%;
-  aspect-ratio: 16/8;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -92,4 +83,26 @@
   display: flex;
   justify-content: space-between;
   margin-top: 8vh;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .card {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .imageContainer {
+    aspect-ratio: 16/9;
+  }
+
+  .button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .bottom {
+    flex-direction: column;
+    margin-top: 10px;
+  }
 }
